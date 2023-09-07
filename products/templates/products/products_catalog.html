@@ -1,0 +1,199 @@
+{% extends '../base.html' %}
+{% load static %}
+{% block title %}products_catalog{% endblock %}
+
+{% block content %}
+<div class="pr_catalog">
+<div class="container">
+<div class="pr_catalog_inner">
+    <div class="pr_catalog_filter">
+        <h2 class="pr_catalog_filter_title">Фильтр</h2>
+        <div class="pr_catalog_filter_inner">
+            <a href="#" class="pr_catalog_filter_clean">Очистить фильтр</a>
+
+            <div class="pr_catalog_filter_item">
+                <div class="pr_catalog_filter_item_title">Категория</div>
+                <div class="pr_catalog_filter_category">
+                    <a href="#" class="pr_catalog_filter_category_item">Все подарки</a>
+                    <a href="#" class="pr_catalog_filter_category_item">Для него</a>
+                    <a href="#" class="pr_catalog_filter_category_item">Для нее</a>
+                    <a href="#" class="pr_catalog_filter_category_item">Для детей</a>
+
+                    <div class="select">
+                        <div class="select_header">
+                            <span class="select_current"><a href="#" class="pr_catalog_filter_category_item">К праздникам</a></span>
+                            <img src="{% static 'products/icons/filter/Otkrivashka.svg' %}" class="select_icon">
+                        </div>
+
+                        <div class="select_body">
+                            <a href="#" class="select_item">Новый год</a>
+                            <a href="#" class="select_item">8 марта</a>
+                            <a href="#" class="select_item">23 февраля</a>
+                            <a href="#" class="select_item">День рождения</a>
+                            <a href="#" class="select_item">День матери</a>
+                            <a href="#" class="select_item">Рождение ребенка</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <form action="" id="filter-form" method="post">
+                {% csrf_token %}
+                <div class="pr_catalog_filter_item">
+                    <div class="pr_catalog_filter_item_title">состав подарков</div>
+                    <div class="pr_catalog_filter_composition">
+                        <div class="pr_catalog_filter_composition_inner">
+                            <label class="pr_catalog_filter_checkbox_item">
+                                <input type="checkbox" class="pr_catalog_filter_checkbox" id="composition_checkbox_edible">
+                                <span class="pr_catalog_filter_custom_checkbox"></span>
+                                <label for="composition_checkbox_edible" class="pr_catalog_filter_label">съедобные</label>
+                            </label>
+                            <label class="pr_catalog_filter_checkbox_item">
+                                <input type="checkbox" class="pr_catalog_filter_checkbox" id="composition_checkbox_inedible">
+                                <span class="pr_catalog_filter_custom_checkbox"></span>
+                                <label for="composition_checkbox_inedible" class="pr_catalog_filter_label">несъедобные</label>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pr_catalog_filter_item">
+                    <div class="pr_catalog_filter_item_title">Назначение</div>
+                    <div class="pr_catalog_filter_composition">
+                        <div class="pr_catalog_filter_composition_inner">
+                            <label class="pr_catalog_filter_checkbox_item">
+                                <input type="checkbox" class="pr_catalog_filter_checkbox" id="appointment_checkbox_kitchen">
+                                <span class="pr_catalog_filter_custom_checkbox"></span>
+                                <label for="appointment_checkbox_kitchen" class="pr_catalog_filter_label">Для кухни</label>
+                            </label>
+                            <label class="pr_catalog_filter_checkbox_item">
+                                <input type="checkbox" class="pr_catalog_filter_checkbox" id="appointment_checkbox_bedroom">
+                                <span class="pr_catalog_filter_custom_checkbox"></span>
+                                <label for="appointment_checkbox_bedroom" class="pr_catalog_filter_label">Для бани</label>
+                            </label>
+                            <label class="pr_catalog_filter_checkbox_item">
+                                <input type="checkbox" class="pr_catalog_filter_checkbox" id="appointment_checkbox_guests">
+                                <span class="pr_catalog_filter_custom_checkbox"></span>
+                                <label for="appointment_checkbox_guests" class="pr_catalog_filter_label">В гости</label>
+                            </label>
+                            <label class="pr_catalog_filter_checkbox_item">
+                                <input type="checkbox" class="pr_catalog_filter_checkbox" id="appointment_checkbox_cosmetics">
+                                <span class="pr_catalog_filter_custom_checkbox"></span>
+                                <label for="appointment_checkbox_cosmetics" class="pr_catalog_filter_label">Косметические наборы</label>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pr_catalog_filter_item">
+                    <div class="pr_catalog_filter_item_title">упаковка</div>
+                    <div class="pr_catalog_filter_composition">
+                        <div class="pr_catalog_filter_composition_inner">
+                            <label class="pr_catalog_filter_checkbox_item">
+                                <input type="checkbox" class="pr_catalog_filter_checkbox" id="package_checkbox_busket">
+                                <span class="pr_catalog_filter_custom_checkbox"></span>
+                                <label for="package_checkbox_busket" class="pr_catalog_filter_label">корзина</label>
+                            </label>
+                            <label class="pr_catalog_filter_checkbox_item">
+                                <input type="checkbox" class="pr_catalog_filter_checkbox" id="package_checkbox_box">
+                                <span class="pr_catalog_filter_custom_checkbox"></span>
+                                <label for="package_checkbox_box" class="pr_catalog_filter_label">коробка</label>
+                            </label>
+                            <label class="pr_catalog_filter_checkbox_item">
+                                <input type="checkbox" class="pr_catalog_filter_checkbox" id="package_checkbox_paket">
+                                <span class="pr_catalog_filter_custom_checkbox"></span>
+                                <label for="package_checkbox_paket" class="pr_catalog_filter_label">пакет</label>
+                            </label>
+                            <label class="pr_catalog_filter_checkbox_item">
+                                <input type="checkbox" class="pr_catalog_filter_checkbox" id="package_checkbox_case">
+                                <span class="pr_catalog_filter_custom_checkbox"></span>
+                                <label for="package_checkbox_case" class="pr_catalog_filter_label">ящик</label>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <div class="pr_catalog_products">
+        <h2 class="pr_catalog_products_title">Каталог подарков</h2>
+        <div class="pr_catalog_products_sort">
+{#            <div class="pr_catalog_products_sort_inner">#}
+{#                <select name="pr_catalog_products_sort" id="">#}
+{#                    <option>По убыванию цены</option>#}
+{#                    <option>По возрастанию цены</option>#}
+{#                    <option>По популярности</option>#}
+{#                </select>#}
+{#            </div>#}
+            <div class="sort_select">
+                <div class="sort_select_title">Сортировать:</div>
+                <div class="sort_select_inner">
+                        <div class="sort_select_header">
+                        <span class="sort_select_current">По умолчанию</span>
+                        <img src="{% static 'products/icons/filter/Otkrivashka.svg' %}" class="sort_select_icon">
+                    </div>
+
+                    <div class="sort_select_body">
+                        <div class="sort_select_item">По убыванию цены</div>
+                        <div class="sort_select_item">По возрастанию цены</div>
+                        <div class="sort_select_item">По умолчанию</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="products_inner-for_catalog">
+            <div class="products_line-for_catalog" id="products_line-for_catalog">
+{#                {% for product in products %}#}
+{#                    <div class="products_item products_item-for_catalog">#}
+{#                        <img src="{% static "products/img/products_slider/Rectangle 21.png" %}" alt="1" class="products_item_img">#}
+{#                        <div class="products_item_info">#}
+{#                            <div class="products_item_info_art">арт. 1234556</div>#}
+{#                            <div class="products_item_info_title">{{ product.title }}</div>#}
+{#                            <div class="products_item_info_price">{{ product.price }} ₽</div>#}
+{#                            <div class="products_item_info_quantity">#}
+{#                                <a href="#" class="products_item_info_quantity_add_btn"><img src="{% static "products/icons/products/+ (1).svg" %}" alt="1"></a>#}
+{#                                <div class="products_item_info_quantity_number">1</div>#}
+{#                                <a href="#" class="products_item_info_quantity_subtract_btn"><img src="{% static "products/icons/products/+.svg" %}" alt=""></a>#}
+{#                            </div>#}
+{#                            <a href="#" class="products_item_info_add_to_basket_btn">В корзину</a>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                {% endfor %}#}
+{#                <div class="products_item products_item-for_catalog">#}
+{#                    <img src="{% static "products/img/products_slider/Rectangle 21.png" %}" alt="1" class="products_item_img">#}
+{#                    <div class="products_item_info">#}
+{#                        <div class="products_item_info_art">арт. 1234556</div>#}
+{#                        <div class="products_item_info_title">Набор 5 (8 марта)</div>#}
+{#                        <div class="products_item_info_price">3 880 ₽</div>#}
+{#                        <div class="products_item_info_quantity">#}
+{#                            <a href="#" class="products_item_info_quantity_add_btn"><img src="{% static "products/icons/products/+ (1).svg" %}" alt="1"></a>#}
+{#                            <div class="products_item_info_quantity_number">1</div>#}
+{#                            <a href="#" class="products_item_info_quantity_subtract_btn"><img src="{% static "products/icons/products/+.svg" %}" alt=""></a>#}
+{#                        </div>#}
+{#                        <a href="#" class="products_item_info_add_to_basket_btn">В корзину</a>#}
+{#                    </div>#}
+{#                </div>#}
+{#                <div class="products_item products_item-for_catalog">#}
+{#                    <img src="{% static "products/img/products_slider/Rectangle 21 (1).png" %}" alt="1" class="products_item_img">#}
+{#                    <div class="products_item_info">#}
+{#                        <div class="products_item_info_art">арт. 1234556</div>#}
+{#                        <div class="products_item_info_title">Набор 4 (8 марта)</div>#}
+{#                        <div class="products_item_info_price">3 880 ₽</div>#}
+{#                        <div class="products_item_info_quantity">#}
+{#                            <a href="#" class="products_item_info_quantity_add_btn"><img src="{% static "products/icons/products/+ (1).svg" %}" alt="1"></a>#}
+{#                            <div class="products_item_info_quantity_number">1</div>#}
+{#                            <a href="#" class="products_item_info_quantity_subtract_btn"><img src="{% static "products/icons/products/+.svg" %}" alt=""></a>#}
+{#                        </div>#}
+{#                        <a href="#" class="products_item_info_add_to_basket_btn">В корзину</a>#}
+{#                    </div>#}
+{#                </div>#}
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+{% endblock %}

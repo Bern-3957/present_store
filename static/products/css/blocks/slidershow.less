@@ -1,0 +1,101 @@
+// main: ../style.less
+
+.slidershow{
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+
+    &_inner{
+        height: 730px;
+        margin: 0 8px;
+        //overflow: hidden;
+    }
+}
+
+.myslides{
+    position: relative;
+
+    &_inner{
+        position: absolute;
+        top: 142px;
+        left: 113px;
+        width: 712px;
+    }
+
+    &_title{
+        font-family: 'Pomidorko';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 70px;
+        line-height: 81px;
+        text-transform: uppercase;
+
+        color: #464646;
+    }
+
+    &_subtitle{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+
+        color: #6B6B6B;
+        margin: 8px 0px 20px 0;
+    }
+
+    &_button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 281px;
+        height: 67px;
+
+        background: #AD6A75;
+        border-radius: 300px;
+
+        font-weight: 400;
+        font-size: 20px;
+
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+}
+
+.dot{
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+
+    background: rgba(173, 106, 117, 0.5);
+    border-radius: 38px;
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.active, dot:hover{
+    width: 24px;
+    height: 24px;
+
+    /* main */
+
+    background: #AD6A75;
+    border-radius: 38px;
+}
+
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from{opacity: .4}
+    to{opacity:1}
+}
+@keyframes fade {
+    from{opacity: .4}
+    to{opacity:1}
+}

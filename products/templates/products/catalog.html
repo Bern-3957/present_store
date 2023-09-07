@@ -1,0 +1,130 @@
+{% extends "../base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="catalog">
+<div class="container">
+    <h1 class="catalog_title">Каталог подарков</h1>
+    <div class="infoblock_inner">
+        <a href="#" class="infoblock_item">
+            <div class="infoblock_item_text">К праздникам</div>
+            <img src="{% static 'products/img/Rectangle 10.png' %}" alt="img" class="infoblock_item_img">
+        </a>
+        <a href="#" class="infoblock_item">
+            <div class="infoblock_item_text infoblock_item_text-right">Для нее</div>
+            <img src="{% static 'products/img/Rectangle 13.png' %}" alt="img" class="infoblock_item_img">
+        </a>
+        <a href="#" class="infoblock_item">
+            <div class="infoblock_item_text infoblock_item_text-bot">Для него</div>
+            <img src="{% static 'products/img/Rectangle 14.png' %}" alt="img" class="infoblock_item_img">
+        </a>
+        <a href="#" class="infoblock_item">
+            <div class="infoblock_item_text">Корпоративные</div>
+            <img src="{% static 'products/img/Rectangle 15.png' %}" alt="img" class="infoblock_item_img">
+        </a>
+    </div>
+
+    <div class="catalog_child">
+        <div class="catalog_child_inner">
+            <div class="catalog_child_item">
+                <img src="{% static "products/img/catalog/1.jpeg" %}" alt="1" class="catalog_child_item_img">
+                <a href="" class="catalog_child_item_inner">
+                    <div class="catalog_child_item_text">Новый год</div>
+                </a>
+            </div>
+            <div class="catalog_child_item">
+                <img src="{% static "products/img/catalog/2.jpeg" %}" alt="2" class="catalog_child_item_img">
+                <a href="#" class="catalog_child_item_inner">
+                    <div class="catalog_child_item_text">8 марта</div>
+                </a>
+            </div>
+            <div class="catalog_child_item">
+                <img src="{% static "products/img/catalog/3.jpeg" %}" alt="3" class="catalog_child_item_img">
+                <a href="#" class="catalog_child_item_inner">
+                    <div class="catalog_child_item_text">23 февраля</div>
+                </a>
+            </div>
+            <div class="catalog_child_item">
+                <img src="{% static "products/img/catalog/4.jpeg" %}" alt="4" class="catalog_child_item_img">
+                <a href="#" class="catalog_child_item_inner">
+                    <div class="catalog_child_item_text">день учителя</div>
+                </a>
+            </div>
+            <div class="catalog_child_item">
+                <img src="{% static "products/img/catalog/5.jpeg" %}" alt="5" class="catalog_child_item_img">
+                <a href="#" class="catalog_child_item_inner">
+                    <div class="catalog_child_item_text">1 сентября</div>
+                </a>
+            </div>
+            <div class="catalog_child_item">
+                <img src="{% static "products/img/catalog/6.jpeg" %}" alt="6" class="catalog_child_item_img">
+                <a href="#" class="catalog_child_item_inner">
+                    <div class="catalog_child_item_text">день рождения</div>
+                </a>
+            </div>
+            <div class="catalog_child_item">
+                <img src="{% static "products/img/catalog/7.jpeg" %}" alt="7" class="catalog_child_item_img">
+                <a href="#" class="catalog_child_item_inner">
+                    <div class="catalog_child_item_text">Ураза-байрам</div>
+                </a>
+            </div>
+            <div class="catalog_child_item">
+                <img src="{% static "products/img/catalog/8.jpeg" %}" alt="8" class="catalog_child_item_img">
+                <a href="#" class="catalog_child_item_inner">
+                    <div class="catalog_child_item_text">день матери</div>
+                </a>
+            </div>
+            <div class="catalog_child_item">
+                <img src="{% static "products/img/catalog/9.jpeg" %}" alt="9" class="catalog_child_item_img">
+                <a href="#" class="catalog_child_item_inner">
+                    <div class="catalog_child_item_text">рождение ребенка</div>
+                </a>
+            </div>
+            <div class="catalog_child_item">
+                <img src="{% static "products/img/catalog/10.jpeg" %}" alt="10" class="catalog_child_item_img">
+                <a href="#" class="catalog_child_item_inner">
+                    <div class="catalog_child_item_text">подарки детям</div>
+                </a>
+            </div>
+            <div class="catalog_child_item">
+                <img src="{% static "products/img/catalog/11.jpeg" %}" alt="11" class="catalog_child_item_img">
+                <a href="#" class="catalog_child_item_inner">
+                    <div class="catalog_child_item_text">для бани</div>
+                </a>
+            </div>
+            <div class="catalog_child_item">
+                <img src="{% static "products/img/catalog/12.jpeg" %}" alt="12" class="catalog_child_item_img">
+                <a href="#" class="catalog_child_item_inner">
+                    <div class="catalog_child_item_text">для кухни</div>
+                </a>
+            </div>
+            <div class="catalog_child_item">
+                <img src="{% static "products/img/catalog/13.jpeg" %}" alt="13 class="catalog_child_item_img">
+                <a href="#" class="catalog_child_item_inner">
+                    <div class="catalog_child_item_text">косметические наборы</div>
+                </a>
+            </div>
+            <div class="catalog_child_item">
+                <img src="{% static "products/img/catalog/14.jpeg" %}" alt="14" class="catalog_child_item_img">
+                <a href="#" class="catalog_child_item_inner">
+                    <div class="catalog_child_item_text">в гости</div>
+                </a>
+            </div>
+            <div class="catalog_child_item-xl">
+                <a href="{% url 'products:products_catalog' %}" class="catalog_child_item-xl_text">Все подарки</a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="present_block">
+    <img src="{% static "products/img/Rectangle 95.png" %}" alt="img" class="first_present_img">
+    <div class="present_block_info">
+        <div class="present_block_info_title">получите скидку 5%</div>
+        <div class="present_block_info_text">Подпишитесь на наши новости и акции и получите постоянную скидку 5%</div>
+    </div>
+    <a href="#" class="present_block_btn">Подписаться</a>
+    <img src="{% static "products/img/Rectangle 93.png" %}" alt="img" class="second_present_img">
+</div>
+
+{% endblock %}

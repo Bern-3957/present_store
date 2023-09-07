@@ -1,0 +1,59 @@
+// compress: true
+
+
+@font-face {
+    font-family: Pomidorko;
+    src: url('../fonts/Pomidorko_cyr.ttf');
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url('../fonts/OpenSans-Bold.ttf') format("Bold"),
+        url('../fonts/OpenSans-light.ttf') format("Light"),
+        url('../fonts/OpenSans-Medium.ttf') format("Medium"),
+        url('../fonts/OpenSans-Regular.ttf') format("Regular");
+}
+html{
+    font-size: 10px;
+
+}
+
+body{
+    margin: 0;
+    font-family: 'OpenSans', sans-serif;
+
+    font-size: 1rem;
+    color: #000;
+
+    &.no-scroll{
+        overflow: hidden;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p{
+    margin: 1.5rem 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+// Block
+@import "blocks/container.less";
+@import "blocks/upheader.less";
+@import "blocks/header.less";
+@import "blocks/slidershow.less";
+@import "blocks/infoblockindex.less";
+@import "blocks/products.less";
+@import "blocks/hov_receive_order.less";
+@import "blocks/present_block.less";
+@import "blocks/footer.less";
+@import "blocks/catalog.less";
+@import "blocks/pr_catalog.less";

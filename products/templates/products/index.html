@@ -1,0 +1,247 @@
+{% extends '../base.html' %}
+{% load static %}
+{% block title %}index{% endblock %}
+{% block content %}
+
+<div class="slidershow">
+<a onclick="mainIndexSlider.pluslides(-1)"><img src="{% static "products/icons/slidershow/prev.svg" %}" alt=""></a>
+<div class="container">
+    <div class="slidershow_inner">
+
+        <div class="myslides fade">
+            <img style="width: 100%" src="{% static "products/img/slider_first.png" %}" alt="slider_img">
+            <div class="myslides_inner">
+                <h1 class="myslides_title">Оригинальные подарки с идеальным стилем</h1>
+                <h4 class="myslides_subtitle">Атмосферные подарочные наборы на любой случай </h4>
+                <a href="#" class="myslides_button">Смотреть в каталоге</a>
+            </div>
+        </div>
+
+        <div class="myslides fade">
+            <img style="width: 100%" src="{% static "products/img/slider_first.png" %}" alt="slider_img">
+            <div class="myslides_inner">
+                <h1 class="myslides_title">Неоригинальные подарки с идеальным стилем</h1>
+                <h4 class="myslides_subtitle">Атмосферные подарочные наборы на любой случай </h4>
+                <a href="#" class="myslides_button">Смотреть в каталоге</a>
+            </div>
+        </div>
+
+        <div class="myslides fade">
+            <img style="width: 100%" src="{% static "products/img/slider_first.png" %}" alt="slider_img">
+            <div class="myslides_inner">
+                <h1 class="myslides_title">Оригинальные подарки с идеальным стилем</h1>
+                <h4 class="myslides_subtitle">Атмосферные подарочные наборы на любой случай </h4>
+                <a href="#" class="myslides_button">Смотреть в каталоге</a>
+            </div>
+        </div>
+
+    </div>
+    <div style="display: flex; align-items: center; justify-content: center">
+        <span class="dot" onclick="mainIndexSlider.currentslide(1)"></span>
+        <span class="dot" onclick="mainIndexSlider.currentslide(2)"></span>
+        <span class="dot" onclick="mainIndexSlider.currentslide(3)"></span>
+    </div>
+</div>
+<a onclick="mainIndexSlider.pluslides(1)"><img src="{% static "products/icons/slidershow/next.svg" %}" alt="next"></a>
+</div>
+<div class="infoblockindex">
+<div class="container">
+    <div class="infoblock_inner">
+        <div class="infoblock_item">
+            <div class="infoblock_item_text">К праздникам</div>
+            <img src="{% static 'products/img/Rectangle 10.png' %}" alt="img" class="infoblock_item_img">
+        </div>
+        <div class="infoblock_item">
+            <div class="infoblock_item_text infoblock_item_text-right">Для нее</div>
+            <img src="{% static 'products/img/Rectangle 13.png' %}" alt="img" class="infoblock_item_img">
+        </div>
+        <div class="infoblock_item">
+            <div class="infoblock_item_text infoblock_item_text-bot">Для него</div>
+            <img src="{% static 'products/img/Rectangle 14.png' %}" alt="img" class="infoblock_item_img">
+        </div>
+        <div class="infoblock_item">
+            <div class="infoblock_item_text">Корпоративные</div>
+            <img src="{% static 'products/img/Rectangle 15.png' %}" alt="img" class="infoblock_item_img">
+        </div>
+    </div>
+    <div class="adv_infoblock_inner">
+        <div class="adv_infoblock_item">
+            <div class="adv_infoblock_rectangle">
+                <img src="{% static "products/icons/infoblock/969248_performance_stopwatch_timer_speed_time_icon 1.png" %}" alt="icon" class="adv_infoblock_img">
+            </div>
+            <div class="adv_infoblock_title">Экономия времени</div>
+            <div class="adv_infoblock_text">Мы уже составили идеальные готовые наборы, вам осталось только выбрать подходящий</div>
+        </div>
+        <div class="adv_infoblock_item">
+            <div class="adv_infoblock_rectangle">
+                <img src="{% static "products/icons/infoblock/2747637_christmas_gifts_new year_surprise_xmas_icon 1.png" %}" alt="icon" class="adv_infoblock_img">
+            </div>
+            <div class="adv_infoblock_title">Широкий ассортимент</div>
+            <div class="adv_infoblock_text">На нашем сайте вы сможете найти подходящий подарок на любое мероприятие</div>
+        </div>
+        <div class="adv_infoblock_item">
+            <div class="adv_infoblock_rectangle">
+                <img src="{% static "products/icons/infoblock/2747643_bow_bowknot_decoration_icon (1) 1.png" %}" alt="icon" class="adv_infoblock_img">
+            </div>
+            <div class="adv_infoblock_title">Отличное качество</div>
+            <div class="adv_infoblock_text">Мы все тщаетельно проверяем и красиво упаковываем, чтобы ничто не смогло испортить ваш праздник</div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="products">
+<button class="products_left_arrow"><img src="{% static "products/icons/slidershow/prev.svg" %}" alt=""></button>
+<div class="container">
+    <div class="products_slider">
+        <div class="products_inner">
+            <div class="products_line">
+                <div class="products_item">
+                    <img src="{% static "products/img/products_slider/Rectangle 21.png" %}" alt="1" class="products_item_img">
+                    <div class="products_item_info">
+                        <div class="products_item_info_art">арт. 1234556</div>
+                        <div class="products_item_info_title">Набор 5 (8 марта)</div>
+                        <div class="products_item_info_price">3 880 ₽</div>
+                        <div class="products_item_info_quantity">
+                            <a href="#" class="products_item_info_quantity_add_btn"><img src="{% static "products/icons/products/+ (1).svg" %}" alt="1"></a>
+                            <div class="products_item_info_quantity_number">1</div>
+                            <a href="#" class="products_item_info_quantity_subtract_btn"><img src="{% static "products/icons/products/+.svg" %}" alt=""></a>
+                        </div>
+                        <a href="#" class="products_item_info_add_to_basket_btn">В корзину</a>
+                    </div>
+                </div>
+                <div class="products_item">
+                    <img src="{% static "products/img/products_slider/Rectangle 21 (1).png" %}" alt="1" class="products_item_img">
+                    <div class="products_item_info">
+                        <div class="products_item_info_art">арт. 1234556</div>
+                        <div class="products_item_info_title">Набор 4 (8 марта)</div>
+                        <div class="products_item_info_price">3 880 ₽</div>
+                        <div class="products_item_info_quantity">
+                            <a href="#" class="products_item_info_quantity_add_btn"><img src="{% static "products/icons/products/+ (1).svg" %}" alt="1"></a>
+                            <div class="products_item_info_quantity_number">1</div>
+                            <a href="#" class="products_item_info_quantity_subtract_btn"><img src="{% static "products/icons/products/+.svg" %}" alt=""></a>
+                        </div>
+                        <a href="#" class="products_item_info_add_to_basket_btn">В корзину</a>
+                    </div>
+                </div>
+                <div class="products_item">
+                    <img src="{% static "products/img/products_slider/Rectangle 21 (2).png" %}" alt="1" class="products_item_img">
+                    <div class="products_item_info">
+                        <div class="products_item_info_art">арт. 1234556</div>
+                        <div class="products_item_info_title">Набор 4 (8 марта)</div>
+                        <div class="products_item_info_price">3 880 ₽</div>
+                        <div class="products_item_info_quantity">
+                            <a href="#" class="products_item_info_quantity_add_btn"><img src="{% static "products/icons/products/+ (1).svg" %}" alt="1"></a>
+                            <div class="products_item_info_quantity_number">1</div>
+                            <a href="#" class="products_item_info_quantity_subtract_btn"><img src="{% static "products/icons/products/+.svg" %}" alt=""></a>
+                        </div>
+                        <a href="#" class="products_item_info_add_to_basket_btn">В корзину</a>
+                    </div>
+                </div>
+                <div class="products_item">
+                    <img src="{% static "products/img/products_slider/Rectangle 21 (3).png" %}" alt="1" class="products_item_img">
+                    <div class="products_item_info">
+                        <div class="products_item_info_art">арт. 1234556</div>
+                        <div class="products_item_info_title">Набор 4 (8 марта)</div>
+                        <div class="products_item_info_price">3 880 ₽</div>
+                        <div class="products_item_info_quantity">
+                            <a href="#" class="products_item_info_quantity_add_btn"><img src="{% static "products/icons/products/+ (1).svg" %}" alt="1"></a>
+                            <div class="products_item_info_quantity_number">1</div>
+                            <a href="#" class="products_item_info_quantity_subtract_btn"><img src="{% static "products/icons/products/+.svg" %}" alt=""></a>
+                        </div>
+                        <a href="#" class="products_item_info_add_to_basket_btn">В корзину</a>
+                    </div>
+                </div>
+                <div class="products_item">
+                    <img src="{% static "products/img/products_slider/Rectangle 21 (4).png" %}" alt="1" class="products_item_img">
+                    <div class="products_item_info">
+                        <div class="products_item_info_art">арт. 1234556</div>
+                        <div class="products_item_info_title">Набор 4 (8 марта)</div>
+                        <div class="products_item_info_price">3 880 ₽</div>
+                        <div class="products_item_info_quantity">
+                            <a href="#" class="products_item_info_quantity_add_btn"><img src="{% static "products/icons/products/+ (1).svg" %}" alt="1"></a>
+                            <div class="products_item_info_quantity_number">1</div>
+                            <a href="#" class="products_item_info_quantity_subtract_btn"><img src="{% static "products/icons/products/+.svg" %}" alt=""></a>
+                        </div>
+                        <a href="#" class="products_item_info_add_to_basket_btn">В корзину</a>
+                    </div>
+                </div>
+                <div class="products_item">
+                    <img src="{% static "products/img/products_slider/Rectangle 21 (4).png" %}" alt="1" class="products_item_img">
+                    <div class="products_item_info">
+                        <div class="products_item_info_art">арт. 1234556</div>
+                        <div class="products_item_info_title">Набор 4 (8 марта)</div>
+                        <div class="products_item_info_price">3 880 ₽</div>
+                        <div class="products_item_info_quantity">
+                            <a href="#" class="products_item_info_quantity_add_btn"><img src="{% static "products/icons/products/+ (1).svg" %}" alt="1"></a>
+                            <div class="products_item_info_quantity_number">1</div>
+                            <a href="#" class="products_item_info_quantity_subtract_btn"><img src="{% static "products/icons/products/+.svg" %}" alt=""></a>
+                        </div>
+                        <a href="#" class="products_item_info_add_to_basket_btn">В корзину</a>
+                    </div>
+                </div>
+                <div class="products_item">
+                    <img src="{% static "products/img/products_slider/Rectangle 21 (4).png" %}" alt="1" class="products_item_img">
+                    <div class="products_item_info">
+                        <div class="products_item_info_art">арт. 1234556</div>
+                        <div class="products_item_info_title">Набор 4 (8 марта)</div>
+                        <div class="products_item_info_price">3 880 ₽</div>
+                        <div class="products_item_info_quantity">
+                            <a href="#" class="products_item_info_quantity_add_btn"><img src="{% static "products/icons/products/+ (1).svg" %}" alt="1"></a>
+                            <div class="products_item_info_quantity_number">1</div>
+                            <a href="#" class="products_item_info_quantity_subtract_btn"><img src="{% static "products/icons/products/+.svg" %}" alt=""></a>
+                        </div>
+                        <a href="#" class="products_item_info_add_to_basket_btn">В корзину</a>
+                    </div>
+                </div>
+                <div class="products_item">
+                    <img src="{% static "products/img/products_slider/Rectangle 21 (4).png" %}" alt="1" class="products_item_img">
+                    <div class="products_item_info">
+                        <div class="products_item_info_art">арт. 1234556</div>
+                        <div class="products_item_info_title">Набор 4 (8 марта)</div>
+                        <div class="products_item_info_price">3 880 ₽</div>
+                        <div class="products_item_info_quantity">
+                            <a href="#" class="products_item_info_quantity_add_btn"><img src="{% static "products/icons/products/+ (1).svg" %}" alt="1"></a>
+                            <div class="products_item_info_quantity_number">1</div>
+                            <a href="#" class="products_item_info_quantity_subtract_btn"><img src="{% static "products/icons/products/+.svg" %}" alt=""></a>
+                        </div>
+                        <a href="#" class="products_item_info_add_to_basket_btn">В корзину</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<button class="products_right_arrow"><img src="{% static "products/icons/slidershow/next.svg" %}" alt="next"></button>
+</div>
+
+<div class="hov_receive_order">
+<div class="container">
+<div class="hov_receive_order_inner">
+    <div class="hov_receive_order_title">
+        Как получить заказ?
+    </div>
+    <div class="hov_receive_order_blocks">
+        <div class="hov_receive_order_blocks_item">Доставка по Москве</div>
+        <div class="hov_receive_order_blocks_item">Доставка по Московской области и в регионы</div>
+        <div class="hov_receive_order_blocks_item">Самовывоз заказа</div>
+        <div class="hov_receive_order_blocks_item">Оплата товара</div>
+    </div>
+    <div class="hov_receive_order_btn">Открыть каталог</div>
+</div>
+</div>
+</div>
+
+<div class="present_block">
+    <img src="{% static "products/img/Rectangle 95.png" %}" alt="img" class="first_present_img">
+    <div class="present_block_info">
+        <div class="present_block_info_title">получите скидку 5%</div>
+        <div class="present_block_info_text">Подпишитесь на наши новости и акции и получите постоянную скидку 5%</div>
+    </div>
+    <a href="#" class="present_block_btn">Подписаться</a>
+    <img src="{% static "products/img/Rectangle 93.png" %}" alt="img" class="second_present_img">
+</div>
+
+
+
+{% endblock %}

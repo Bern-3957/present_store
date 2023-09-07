@@ -1,0 +1,66 @@
+// main: ../style.less
+
+.hov_receive_order{
+    margin-bottom: 113px;
+    &_inner{
+        width: 1680px;
+        height: 550px;
+        flex-shrink: 0;
+
+        background: #F9F3EF;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &_title{
+        width: 546px;
+        color: var(--text-title, #464646);
+        text-align: center;
+        font-family: Pomidorko;
+        font-size: 60px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    &_blocks{
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+
+        margin: 24px  auto;
+        &_item{
+            width: 297px;
+            height: 84px;
+
+            color: var(--text, #6B6B6B);
+            text-align: center;
+            font-family: Open Sans;
+            font-size: 16px;
+            font-weight: 400;
+
+            display: flex;
+            padding: 20px 40px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 800px;
+            border: 1px solid var(--text, #6B6B6B);
+        }
+    }
+
+    &_btn{
+        width: 244px;
+        height: 67px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 300px;
+        background: var(--main, #AD6A75);
+        color: #FFF;
+        font-family: Open Sans;
+        font-size: 20px;
+        font-weight: 400;
+        margin: 30px auto;
+    }
+}

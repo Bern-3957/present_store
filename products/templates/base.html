@@ -1,0 +1,133 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'products/css/style.css' %}">
+    <title id="titleHead">{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+<div class="upheader">
+<div class="container">
+    <div class="upheader_inner">
+        <img class="upheader_logo" src="{% static "products/icons/upheader/logo.svg" %}">
+        <div class="upheader_slider">
+            <button class="upheader_slider_previous"><img src="{% static 'products/icons/upheader/previous.svg' %}" alt="previous"></button>
+            <div class="upheader_slider_inner">
+                <div class="upheader_slider_line">
+
+                    <div class="upheader_slider_line_item">
+
+                        <div class="upheader_slider_line_item_circle">
+                            <img src="{% static "products/icons/upheader/Quality.svg" %}" alt="" class="upheader_slider_line_item_circle_img">
+                        </div>
+                        <div class="upheader_slider_line_item_text">Гарантия качества</div>
+
+                    </div>
+                    <div class="upheader_slider_line_item">
+
+                        <div class="upheader_slider_line_item_circle">
+                            <img src="{% static "products/icons/upheader/Discount.svg" %}" alt="" class="upheader_slider_line_circle_item_img">
+                        </div>
+                        <div class="upheader_slider_line_item_text">Система скидок</div>
+
+                    </div>
+                    <div class="upheader_slider_line_item">
+
+                        <div class="upheader_slider_line_item_circle">
+                            <img src="{% static "products/icons/upheader/b.svg" %}" alt="" class="upheader_slider_line_circle_item_img">
+                        </div>
+                        <div class="upheader_slider_line_item_text">Бесплатная открытка</div>
+
+                    </div>
+                    <div class="upheader_slider_line_item">
+
+                        <div class="upheader_slider_line_item_circle">
+                            <img src="{% static "products/icons/upheader/a.svg" %}" alt="" class="upheader_slider_line_circle_item_img">
+                        </div>
+                        <div class="upheader_slider_line_item_text">Анонимная доставка</div>
+
+                    </div>
+
+                </div>
+            </div>
+            <button class="upheader_slider_next"><img src="{% static 'products/icons/upheader/next.svg' %}" alt="next"></button>
+        </div>
+        <div class="upheader_contacts">
+            <div class="upheader_contacts_line1">
+                <img src="{% static "products/icons/upheader/telegram.svg" %}" alt="wh">
+                <span class="upheader_span">+7 (985) 223-40-59</span>
+            </div>
+            <div class="upheader_contacts_line2">
+                <img src="{% static "products/icons/upheader/whatsap.svg" %}" alt="tel">
+                <span class="upheader_span">с 9:00 до 19:00 (Пн-Сб)</span>
+            </div>
+        </div>
+        <div class="upheader_buttons">
+            <a href="#" class="upheader_buttons_basket"><img src="{% static "products/icons/upheader/basket.svg" %}" alt="basket"></a>
+            <a href="#" class="upheader_buttons_login"><img src="{% static "products/icons/upheader/login.svg" %}" alt="basket">Войти</a>
+        </div>
+    </div>
+</div>
+</div>
+<div class="header">
+<div class="container">
+    <div class="header_inner">
+        <div class="header_main">
+            <img class="header_main_img" src="{% static "products/icons/header/hurt.svg" %}" alt="hurt">
+            <a href="{% url "index" %}" style="text-decoration: none; color:#464646">Главная</a>
+        </div>
+        <a href="{% url "products:catalog" %}" class="header_button">Каталог подарков</a>
+        <nav class="header_nav">
+            <a class="header_nav_item" href="#">О нас</a>
+            <a class="header_nav_item" href="#">Доставка</a>
+            <a class="header_nav_item" href="#">Акции</a>
+            <a class="header_nav_item" href="#">Скидки</a>
+            <a class="header_nav_item" href="#">Контакты</a>
+        </nav>
+
+    </div>
+</div>
+</div>
+{% block content %}{% endblock %}
+
+<footer class="footer">
+<div class="container">
+<div class="footer_inner">
+    <div class="footer_block_left">
+    <img src="{% static "products/icons/footer/logo-footer.png" %}" alt="logo" class="footer_logo">
+    <span>Политика конфиденциальности</span>
+    <span>Copyright © 2023, комплименты</span>
+</div>
+    <div class="footer_block_middle">
+    <div class="footer_block_middle_left">
+        <span>Каталог подарков</span>
+        <span>О нас</span>
+        <span>Контакты</span>
+    </div>
+    <div class="footer_block_middle_right">
+        <span>Доставка</span>
+        <span>Акции</span>
+        <span>Скидки</span>
+    </div>
+</div>
+    <div class="footer_block_right">
+    <span>+7 (985) 223-40-59</span>
+    <span>info@complimente.ru</span>
+    <span>с 9:00 до 19:00 (Пн-Сб)</span>
+    <div class="footer_block_right_icons">
+        <img src="{% static "products/icons/footer/telegram.svg" %}" alt="" class="footer_block_right_icons-telegram">
+        <img src="{% static "products/icons/footer/whatsapp (1).svg" %}" alt="" class="footer_block_right_icons-whatsapp">
+    </div>
+</div>
+</div>
+</div>
+</footer>
+
+<script src="{% static 'products/js/script.js' %}"></script>
+</body>
+</html>

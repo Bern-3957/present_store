@@ -1,0 +1,88 @@
+// main: ../style.less
+
+.catalog{
+
+    &_title{
+        color: #464646;
+        font-family: Pomidorko;
+        font-size: 48px;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin: 70px 0 63px 0;
+        text-align: center;
+    }
+
+    &_child{
+        margin-top: 57px;
+        padding: 0 5px;
+        &_inner{
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+        &_item{
+            display: flex;
+            width: 398px;
+            height: 164px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 7px;
+            border: 2px solid #B28E8C;
+            overflow: hidden;
+            position: relative;
+
+            &-xl{
+                display: flex;
+                width: 822px;
+                height: 164px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 7px;
+                background-color: #AD6A75;
+                //overflow: hidden;
+
+                &_text{
+                    color: #FFF;
+                    text-align: center;
+                    font-family: Pomidorko;
+                    font-size: 32px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                }
+            }
+
+            &_img{
+                display: inline-block;
+                margin: 0 auto;
+            }
+
+            &_inner {
+                position: absolute;
+                display: flex;
+                width: 350px;
+                height: 70px;
+                justify-content: center;
+                align-items: center;
+
+                border-radius: 40px;
+                border: 1px solid #FFF;
+                background: rgba(255, 255, 255, 0.80);
+                z-index: 1;
+
+                text-decoration: none;
+            }
+
+            &_text{
+                color: #464646;
+                text-align: center;
+                font-family: Pomidorko;
+                font-size: 24px;
+                font-weight: 400;
+                text-transform: uppercase;
+
+            }
+
+        }
+
+    }
+}
